@@ -1,4 +1,4 @@
-/* --- Day 7: Supply Stacks --- */
+/* --- Day 7: No Space Left On Device --- */
 
 import { readFile } from './helpers/index.js';
 
