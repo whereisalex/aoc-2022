@@ -6,7 +6,6 @@ const moves = { R: [0, 1], L: [0, -1], U: [1, 0], D: [-1, 0] };
 
 class Rope {
   constructor(movements) {
-    this.movements = movements;
     this.head = [0, 0];
     this.tail = [0, 0];
     this.tailPositions = new Set(['0,0']);
