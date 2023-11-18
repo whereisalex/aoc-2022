@@ -54,13 +54,13 @@ class Map {
       moves.forEach(([xDiff, yDiff]) => {
         const neighbour = [y + yDiff, x + xDiff];
         if (!this.isValidPositionOnMap(...neighbour)) return;
-        const isNeighbourVisitable = distanceMap[neighbour[0]][neighbour[1]] < 0;
+        const isNeighbourUnvisited = distanceMap[neighbour[0]][neighbour[1]] < 0;
         const isNeighbourReachable = isReachable(
           this.map[neighbour[0]][neighbour[1]],
           this.map[y][x]
         );
 
-        if (isNeighbourVisitable && isNeighbourReachable) {
+        if (isNeighbourUnvisited && isNeighbourReachable) {
           queue.push(neighbour);
           distanceMap[neighbour[0]][neighbour[1]] = distanceMap[y][x] + 1;
         }
